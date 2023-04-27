@@ -20,7 +20,7 @@ const createBlog = (blog) => {
     blogSection.innerHTML += `
     <div class="blog-card">
         <img src="${data.bannerImage}" class="blog-image" alt="">
-        <h1 class="blog-title" title=${data.title}">${data.title.substring(0, 100) + '...'}</h1>
+        <h1 class="blog-title" title=${data.title}">${data.title.substring(0, 50) + '...'}</h1>
         <p class="blog-overview">${data.article.substring(0, 200) + '...'}</p>
         <a href="/${blog.id}" class="btn btn-dark">read</a>
     </div>
@@ -58,7 +58,7 @@ function displayNews() {
         let blogTitle = document.createElement('h1');
         blogTitle.className = "blog-title";
         blogTitle.title = data.title;
-        blogTitle.innerHTML = data.title.substring(0, 100) + '...';
+        blogTitle.innerHTML = data.title.substring(0, 50) + '...';
 
         let discription = document.createElement('p');
         discription.className = "blog-overview";
@@ -75,7 +75,7 @@ function displayNews() {
         latersNewsSection.appendChild(discription);
         latersNewsSection.appendChild(link);
 
-        console.log(latersNewsSection);
+        // console.log(latersNewsSection);
 
         blogSection.appendChild(latersNewsSection)
     });
